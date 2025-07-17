@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/minimal-resume/static/css/main.c5506d23.css",
+    "main.js": "/minimal-resume/static/js/main.7fc84fbf.js",
+    "static/js/231.f9588153.chunk.js": "/minimal-resume/static/js/231.f9588153.chunk.js",
+    "index.html": "/minimal-resume/index.html",
+    "main.c5506d23.css.map": "/minimal-resume/static/css/main.c5506d23.css.map",
+    "main.7fc84fbf.js.map": "/minimal-resume/static/js/main.7fc84fbf.js.map",
+    "231.f9588153.chunk.js.map": "/minimal-resume/static/js/231.f9588153.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c5506d23.css",
+    "static/js/main.7fc84fbf.js"
+  ]
+}
