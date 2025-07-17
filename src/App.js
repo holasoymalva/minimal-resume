@@ -12,7 +12,7 @@ const App = () => {
       phone: "+1 (555) 123-4567",
       linkedin: "linkedin.com/in/yourprofile",
       github: "github.com/yourusername",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+      avatar: "https://assets.ycodeapp.com/assets/app17394/images/wR0wpS9fOc0XBd6UYs3q9eAbDpCwdLjfVfKcSKXX.png"
     },
     about: "Write a compelling summary about yourself, your experience, skills, and what you're passionate about. Describe your career journey, key achievements, and what makes you unique as a professional.",
     workExperience: [
