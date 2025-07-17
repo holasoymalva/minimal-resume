@@ -1,5 +1,7 @@
 # Minimal Resume
 
+<img width="763" height="518" alt="image" src="https://github.com/user-attachments/assets/09ba3973-4f9f-4fae-ab86-955b8cb11220" />
+
 Un currículum web minimalista y editable construido con React y Tailwind CSS. Este proyecto te permite crear y personalizar tu currículum de manera sencilla directamente en el navegador.
 
 ## 🚀 Características
