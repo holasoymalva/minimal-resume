@@ -13,7 +13,10 @@
     "react-scripts": "^0.0.0",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
+  "homepage": "https://yourusername.github.io/minimal-resume",
+   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,6 +39,7 @@
     "autoprefixer": "^10.4.21",
     "eslint": "^8.57.1",
     "eslint-config-react-app": "^7.0.1",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.11"
   }
