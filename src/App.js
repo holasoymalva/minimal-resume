@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Edit2, Save, X, Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Edit2, Save, X, Mail, Phone, MapPin, Linkedin, Github, Moon, Sun } from 'lucide-react';
 
 const App = () => {
   const [isEditing, setIsEditing] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
   const [resumeData, setResumeData] = useState({
     personalInfo: {
       name: "Your Name",
@@ -65,6 +66,19 @@ const App = () => {
     ]
   });
 
+  const toggleDarkMode = () => {
+    setDarkMode(prev => !prev);
+  };
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (darkMode) {
+      root.classList.add('dark');
+    } else {
+      root.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   const [editData, setEditData] = useState(resumeData);
 
   const addWorkExperience = () => {
@@ -108,7 +122,16 @@ const App = () => {
   const currentData = isEditing ? editData : resumeData;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white transition-all">
+      <div className="p-4 flex justify-end">
+        <button
+          onClick={toggleDarkMode}
+          className="p-2 rounded-full bg-gray-200 dark:bg-gray-800 hover:scale-105 transition"
+        >
+          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+      </div>
+
       <div className="max-w-3xl mx-auto p-8">
         {/* Header */}
         <div className="mb-12">
@@ -127,10 +150,10 @@ const App = () => {
               {isEditing ? (
                 <textarea
                   value={currentData.personalInfo.title}
-                  className="text-gray-600 text-sm leading-relaxed w-full border border-gray-300 rounded px-2 py-1 h-20"
+                  className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed w-full border border-gray-300 rounded px-2 py-1 h-20"
                 />
               ) : (
-                <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed max-w-md">
                   {currentData.personalInfo.title}
                 </p>
               )}
@@ -211,10 +234,10 @@ const App = () => {
           {isEditing ? (
             <textarea
               value={currentData.about}
-              className="text-gray-700 text-sm leading-relaxed w-full border border-gray-300 rounded px-3 py-2 h-32"
+              className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed w-full border border-gray-300 rounded px-3 py-2 h-32"
             />
           ) : (
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
               {currentData.about}
             </p>
           )}
@@ -298,10 +321,10 @@ const App = () => {
                   <textarea
                     value={exp.description}
                     placeholder="Description"
-                    className="text-gray-600 text-sm leading-relaxed w-full border border-gray-300 rounded px-2 py-1 h-20"
+                    className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed w-full border border-gray-300 rounded px-2 py-1 h-20"
                   />
                 ) : (
-                  <p className="text-gray-600 text-sm leading-relaxed">{exp.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{exp.description}</p>
                 )}
               </div>
             ))}
@@ -316,7 +339,7 @@ const App = () => {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-bold">{edu.institution}</h3>
-                  <p className="text-sm text-gray-600">{edu.degree}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{edu.degree}</p>
                 </div>
                 <span className="text-gray-500 text-sm">{edu.period}</span>
               </div>
@@ -386,7 +409,7 @@ const App = () => {
                       <textarea
                         value={project.description}
                         placeholder="Project description"
-                        className="text-gray-600 text-sm border border-gray-300 rounded px-2 py-1 w-full h-20"
+                        className="text-gray-600 dark:text-gray-300 text-sm border border-gray-300 rounded px-2 py-1 w-full h-20"
                       />
                       <input
                         type="text"
@@ -398,7 +421,7 @@ const App = () => {
                   ) : (
                     <>
                       <h3 className="font-bold text-lg mb-2">{project.name}</h3>
-                      <p className="text-gray-600 text-sm mb-3">{project.description}</p>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">{project.description}</p>
                       <div className="flex flex-wrap gap-1">
                         {project.tags.map((tag, tagIndex) => (
                           <span
