@@ -67,41 +67,6 @@ const App = () => {
 
   const [editData, setEditData] = useState(resumeData);
 
-  const handleEdit = () => {
-    setIsEditing(true);
-    setEditData({ ...resumeData });
-  };
-
-  const handleSave = () => {
-    setResumeData({ ...editData });
-    setIsEditing(false);
-  };
-
-  const handleCancel = () => {
-    setEditData({ ...resumeData });
-    setIsEditing(false);
-  };
-
-  const updatePersonalInfo = (field, value) => {
-    setEditData(prev => ({
-      ...prev,
-      personalInfo: { ...prev.personalInfo, [field]: value }
-    }));
-  };
-
-  const updateAbout = (value) => {
-    setEditData(prev => ({ ...prev, about: value }));
-  };
-
-  const updateWorkExperience = (index, field, value) => {
-    setEditData(prev => ({
-      ...prev,
-      workExperience: prev.workExperience.map((exp, i) => 
-        i === index ? { ...exp, [field]: value } : exp
-      )
-    }));
-  };
-
   const addWorkExperience = () => {
     setEditData(prev => ({
       ...prev,
@@ -122,15 +87,6 @@ const App = () => {
     }));
   };
 
-  const updateProject = (index, field, value) => {
-    setEditData(prev => ({
-      ...prev,
-      projects: prev.projects.map((project, i) => 
-        i === index ? { ...project, [field]: value } : project
-      )
-    }));
-  };
-
   const addProject = () => {
     setEditData(prev => ({
       ...prev,
@@ -147,11 +103,6 @@ const App = () => {
       ...prev,
       projects: prev.projects.filter((_, i) => i !== index)
     }));
-  };
-
-  const updateSkills = (value) => {
-    const skillsArray = value.split(',').map(skill => skill.trim()).filter(skill => skill);
-    setEditData(prev => ({ ...prev, skills: skillsArray }));
   };
 
   const currentData = isEditing ? editData : resumeData;
@@ -213,62 +164,44 @@ const App = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex gap-4 text-sm text-gray-500">
-            {isEditing ? (
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-1">
-                  <Mail size={16} />
-                  <input
-                    type="email"
-                    value={currentData.personalInfo.email}
-                    className="border border-gray-300 rounded px-2 py-1"
-                  />
-                </div>
-                <div className="flex items-center gap-1">
-                  <Phone size={16} />
-                  <input
-                    type="tel"
-                    value={currentData.personalInfo.phone}
-                    className="border border-gray-300 rounded px-2 py-1"
-                  />
-                </div>
-                <div className="flex items-center gap-1">
-                  <Linkedin size={16} />
-                  <input
-                    type="text"
-                    value={currentData.personalInfo.linkedin}
-                    className="border border-gray-300 rounded px-2 py-1"
-                  />
-                </div>
-                <div className="flex items-center gap-1">
-                  <Github size={16} />
-                  <input
-                    type="text"
-                    value={currentData.personalInfo.github}
-                    className="border border-gray-300 rounded px-2 py-1"
-                  />
-                </div>
-              </div>
-            ) : (
-              <>
-                <div className="flex items-center gap-1">
-                  <Mail size={16} />
-                  <span>{currentData.personalInfo.email}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Phone size={16} />
-                  <span>{currentData.personalInfo.phone}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Linkedin size={16} />
-                  <span>{currentData.personalInfo.linkedin}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <Github size={16} />
-                  <span>{currentData.personalInfo.github}</span>
-                </div>
-              </>
-            )}
+          <div className="flex gap-3">
+            <a
+              href={`mailto:${currentData.personalInfo.email}`}
+              title={currentData.personalInfo.email}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-100 cursor-pointer"
+            >
+              <Mail size={18} />
+            </a>
+
+            <a
+              href={`tel:${currentData.personalInfo.phone}`}
+              title={currentData.personalInfo.phone}
+              className="w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-100 cursor-pointer"
+            >
+              <Phone size={18} />
+            </a>
+
+            <a
+              href={`https://${currentData.personalInfo.linkedin}`}
+              title={currentData.personalInfo.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-100 cursor-pointer"
+            >
+              <Linkedin size={18} />
+            </a>
+
+            <a
+              href={`https://${currentData.personalInfo.github}`}
+              title={currentData.personalInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 border rounded-lg flex items-center justify-center hover:bg-gray-100 cursor-pointer"
+            >
+              <Github size={18} />
+            </a>
           </div>
         </div>
 
