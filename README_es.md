@@ -1,143 +1,161 @@
-# Minimal Resume
+# Plantilla de Currículum Web Minimalista – React + Tailwind CSS
 
-<img width="763" height="518" alt="image" src="https://github.com/user-attachments/assets/09ba3973-4f9f-4fae-ab86-955b8cb11220" />
+[Demo](https://holasoymalva.github.io/minimal-resume/)
 
-Un currículum web minimalista y editable construido con React y Tailwind CSS. Este proyecto te permite crear y personalizar tu currículum de manera sencilla directamente en el navegador.
+<img width="763" height="518" alt="Captura de pantalla" src="https://github.com/user-attachments/assets/09ba3973-4f9f-4fae-ab86-955b8cb11220" />
+
+Un currículum web editable y minimalista construido con React y Tailwind CSS. Este proyecto te permite crear y personalizar tu CV directamente en el navegador de forma visual y sencilla.
+
+> **🌐 Idioma**: [English](README.md) | Español
+
+---
 
 ## 🚀 Características
 
-- **Diseño minimalista**: Interfaz limpia y profesional
-- **Edición en tiempo real**: Edita tu información directamente en la página
-- **Totalmente responsive**: Se adapta a cualquier dispositivo
-- **Fácil personalización**: Modifica colores, fuentes y contenido fácilmente
-- **Sin base de datos**: Toda la información se almacena en el estado de React
+- **Diseño limpio y profesional**
+- **Edición en tiempo real**: actualiza tu currículum directamente en la interfaz
+- **Totalmente responsive**: se adapta a cualquier dispositivo
+- **Íconos de contacto clicables**: correo, teléfono, LinkedIn, GitHub
+- **Tooltips al pasar el cursor**: muestra los datos de contacto
+- **Sin base de datos**: toda la información se guarda en el estado de React
+- **Fácil de personalizar**: modifica colores, tipografías y contenido
+
+---
 
 ## 🛠️ Tecnologías utilizadas
 
-- **React 19.1.0**: Framework principal
-- **Tailwind CSS 4.1.11**: Para estilos
-- **Lucide React**: Para iconos
-- **React Scripts**: Para el build y desarrollo
+- **React 19.1.0**
+- **Tailwind CSS 4.1.11**
+- **Lucide React** para íconos SVG
+- **React Scripts** para ejecución y build
+
+---
 
 ## 📋 Secciones incluidas
 
-- **Información personal**: Nombre, título, ubicación y contacto
-- **Acerca de**: Descripción profesional personalizable
-- **Experiencia laboral**: Historial de trabajo con descripciones detalladas
-- **Educación**: Información académica
-- **Habilidades**: Lista de competencias técnicas
-- **Proyectos**: Portafolio de proyectos con etiquetas
+- **Información personal**  
+  Nombre, título profesional, ubicación e íconos de contacto
+- **Sobre mí**  
+  Resumen personalizado sobre tu perfil profesional
+- **Experiencia laboral**  
+  Historial de empleos con descripciones detalladas
+- **Educación**  
+  Estudios académicos
+- **Habilidades**  
+  Lista de competencias técnicas
+- **Proyectos**  
+  Portafolio con etiquetas de tecnologías
+
+---
 
 ## 🚀 Instalación y uso
 
-### Prerrequisitos
+### Requisitos
 
 - Node.js (versión 16 o superior)
 - npm o yarn
 
 ### Instalación
 
-1. Clona el repositorio:
 ```bash
 git clone https://github.com/holasoymalva/minimal-resume.git
 cd minimal-resume
-```
-
-2. Instala las dependencias:
-```bash
 npm install
-```
-
-3. Inicia el servidor de desarrollo:
-```bash
 npm start
-```
+````
 
-4. Abre tu navegador en `http://localhost:3000`
-
-## 📝 Personalización
-
-### Editando tu información
-
-1. Haz clic en el botón "Editar" en la parte superior derecha
-2. Modifica cualquier campo directamente en la interfaz
-3. Guarda los cambios haciendo clic en "Guardar"
-
-### Personalizando estilos
-
-Los estilos se pueden modificar editando las clases de Tailwind CSS en el archivo `src/App.js`. Algunos elementos que puedes personalizar:
-
-- Colores de acento
-- Tipografías
-- Espaciado
-- Disposición de elementos
-
-### Añadiendo nuevas secciones
-
-El componente es completamente modular. Puedes añadir nuevas secciones siguiendo el patrón existente:
-
-```jsx
-// Ejemplo de nueva sección
-<section className="mb-12">
-  <h2 className="text-xl font-bold mb-4">Nueva Sección</h2>
-  {/* Contenido de la sección */}
-</section>
-```
-
-## 🎨 Capturas de pantalla
-
-### Modo Vista
-![Vista del currículum](screenshot-view.png)
-
-### Modo Edición
-![Modo de edición](screenshot-edit.png)
-
-## 📦 Scripts disponibles
-
-En el directorio del proyecto, puedes ejecutar:
-
-### `npm start`
-Ejecuta la aplicación en modo desarrollo.
-
-### `npm test`
-Ejecuta los tests en modo interactivo.
-
-### `npm run build`
-Construye la aplicación para producción en la carpeta `build`.
-
-### `npm run eject`
-**Nota: esta operación es irreversible.**
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Para contribuir:
-
-1. Haz fork del proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📜 Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
-
-## 👨‍💻 Autor
-
-**Malva** - [@holasoymalva](https://github.com/holasoymalva)
-
-## 🙏 Agradecimientos
-
-- Gracias a la comunidad de React por las herramientas increíbles
-- Tailwind CSS por hacer que el styling sea tan sencillo
-- Lucide React por los iconos hermosos y consistentes
-
-## 📞 Soporte
-
-Si tienes algún problema o sugerencia, por favor:
-- Abre un issue en GitHub
-- Contáctame en mis redes sociales
+Luego abre `http://localhost:3000` en tu navegador.
 
 ---
 
-⭐ ¡No olvides darle una estrella al proyecto si te fue útil!
+## 📝 Personalización
+
+### Editar tu información
+
+1. Haz clic en el botón **"Edit"** (Editar)
+2. Modifica directamente los campos visibles
+3. Guarda tus cambios con **"Save"** (Guardar)
+
+### Editar íconos de contacto
+
+Dentro del componente `App.js`, puedes modificar el objeto `resumeData.personalInfo`:
+
+```js
+personalInfo: {
+  email: "tu.email@ejemplo.com",
+  phone: "+34 123 456 789",
+  linkedin: "linkedin.com/in/tuusuario",
+  github: "github.com/tuusuario"
+}
+```
+
+* Cada ícono abrirá el enlace correspondiente (`mailto`, `tel`, o `https://`)
+* Se muestra la información como **tooltip** al pasar el cursor
+* Los íconos están estilizados dentro de contenedores cuadrados con borde
+
+---
+
+### Personalizar estilos
+
+Puedes cambiar los estilos usando las clases de Tailwind CSS directamente en `src/App.js`.
+
+Personaliza:
+
+* Colores de fondo, texto y borde
+* Espaciado y layout
+* Comportamiento de íconos y botones
+
+---
+
+## 🎨 Capturas
+
+![Vista previa](https://github.com/user-attachments/assets/2c9c70ce-fa40-4fd0-ad17-fefc519fff8c)
+
+---
+
+## 📦 Scripts disponibles
+
+```bash
+npm start       # Ejecuta en modo desarrollo
+npm test        # Corre pruebas unitarias (si aplican)
+npm run build   # Genera build de producción
+npm run eject   # Expone configuración (no reversible)
+```
+
+---
+
+## 🤝 Contribuciones
+
+¡Se agradecen contribuciones!
+Pasos recomendados:
+
+```bash
+1. Haz un fork del proyecto
+2. Crea una nueva rama
+3. Realiza tus cambios
+4. Abre un Pull Request 🚀
+```
+
+---
+
+## 📜 Licencia
+
+Este proyecto está licenciado bajo la licencia MIT. Revisa el archivo `LICENSE`.
+
+---
+
+## 👨‍💻 Autor
+
+**Malva** – [@holasoymalva](https://github.com/holasoymalva)
+
+---
+
+## 🙏 Agradecimientos
+
+* Comunidad de React
+* Tailwind CSS por su potencia y simplicidad
+* Lucide Icons por los íconos de código abierto
+
+---
+
+⭐ ¡Dale una estrella si este proyecto te fue útil!
