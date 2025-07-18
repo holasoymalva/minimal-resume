@@ -1,4 +1,6 @@
-# Minimal Resume - [Demo](https://holasoymalva.github.io/minimal-resume/)
+# Minimalist Web Resume Template – React + Tailwind CSS
+
+[Demo](https://holasoymalva.github.io/minimal-resume/)
 
 <img width="763" height="518" alt="image" src="https://github.com/user-attachments/assets/09ba3973-4f9f-4fae-ab86-955b8cb11220" />
 
